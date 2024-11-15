@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Home Page </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="auth-form">
+  <ion-grid class="ion-padding ion-text-center">
+    <ion-row>
+     <ion-col ion-align-self-center>
+        <div class="title">
+          <h2>Bienvenu a isimed 
+          </h2>
+          <p> Class L3SI </p>
+          <p> spétialité génie logicielle</p>
+        </div>
+     <ion-button [routerLink]="['/login']" expand="block">
+        <ion-label>Connexion</ion-label>
+     </ion-button>  
+     <span class="divider line one-line">or</span>  
+     <ion-button [routerLink]="['/signup']" fill="clear">
+     </ion-button>
+     <ion-item><ion-icon name="logo-facebook"></ion-icon>
+      <ion-icon name="logo-instagram"></ion-icon>
+      <ion-icon name="logo-google"></ion-icon></ion-item>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+</ion-content>

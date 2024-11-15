@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-grid>
+  <ion-row class="ion-justify-content-center">
+    <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+      <div class="ion-text-center"><br><br><br><br>
+        <h4>Register Form</h4>
+      </div><br><br><br><br>
+      <div class="form">
+        <ion-item>
+          <ion-input [(ngModel)]="user.username" placeholder="entrer user name" type="text"><ion-icon name="person-outline"></ion-icon>
+          </ion-input> </ion-item> <br>
+          <ion-item>
+            <ion-input [(ngModel)]="user.email" placeholder="Entrer email" type="email"><ion-icon name="mail-outline"></ion-icon></ion-input> <br>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="user.password" placeholder="Entrer password" type="password"><ion-icon name="lock-closed-outline"></ion-icon></ion-input> <br>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="user.dateOfBirth" placeholder="Entrer date" type="date"></ion-input></ion-item> <br>
+      </div>
+      <div>
+        <ion-radio-group [(ngModel)]="user.gender" value="custom-checked">
+        <ion-radio value="Homme"></ion-radio> 
+        <ion-label>Homme</ion-label>
+        &nbsp; &nbsp;
+        <ion-radio value="Femme"></ion-radio> 
+        <ion-label>Femme</ion-label>
+        </ion-radio-group>
+      </div> <br>
+      <div padding>
+        <ion-button (click)="registerUser()"  size="large" expend="block">Register</ion-button> 
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
